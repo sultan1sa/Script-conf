@@ -1,0 +1,534 @@
+http_port: 6166
+socks_port: 8300
+allow_external_connections: false
+vif_only: false
+bypass_tunnel_proxy:
+- buy.itunes.apple.com
+- itunes.apple.com
+- apple.com
+- api.revenuecat.com
+hide_vpn_icon: false
+geoip_db_url: https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb
+include_all_networks: false
+include_apns: false
+include_cellular_services: false
+include_local_networks: false
+dns_servers:
+- system
+secure_dns:
+  servers:
+  - ''
+  ecs: false
+  public_ip_lookup_url: ''
+proxies:
+- trojan:
+    name: 🇺🇸 TR-TCP-NA 🇺🇸 US-45.79.9.98:443 📡 PING-025.85-MS
+    server: 45.79.9.98
+    port: 443
+    sni: prod.hosts.ooklaserver.net:8080
+    password: be968c88-86db-48e7-b8f8-ecebb33a022f
+    tfo: false
+    udp_relay: true
+    skip_tls_verify: true
+- trojan:
+    name: 🇺🇸 TR-TCP-TLS 🇺🇸 US-23.158.72.133:443 📡 PING-071.00-MS
+    server: 23.158.72.133
+    port: 443
+    sni: prod.hosts.ooklaserver.net:8080
+    password: dab0b780-fdff-11ee-9291-1239d0255272
+    tfo: false
+    udp_relay: true
+    skip_tls_verify: true
+policy_groups:
+- select:
+    name: 美国节点🇺🇸
+    policies:
+    - 🇺🇸 TR-TCP-TLS 🇺🇸 US-23.158.72.133:443 📡 PING-071.00-MS
+    - 自行选择
+    flatten: true
+    filter: (?=.*(美国|美國|US|洛杉矶|西雅图|(?i)States|American))^((?!(香港|台湾|日本|新加坡|韩国|狮城|南朝鲜|SG|JP|KR|HK|TW|台灣|韓國|獅城)).)*$
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/US.png
+- external:
+    name: 自行选择
+    type: select
+    urls:
+    - https://dlj.tf/g1OkFjN
+    - https://suo.yt/B1ZuTN3
+    - https://789.st/k7mxLon
+    update_interval: 86400
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Static.png
+    hidden: true
+- select:
+    name: 苹果服务
+    policies:
+    - 美国节点🇺🇸
+    - DIRECT
+    - 自行选择
+    - 自动选择
+    - 香港节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    - 🇺🇸 TR-TCP-TLS 🇺🇸 US-23.158.72.133:443 📡 PING-071.00-MS
+    - 🇺🇸 TR-TCP-NA 🇺🇸 US-45.79.9.98:443 📡 PING-025.85-MS
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Apple-2.png
+- select:
+    name: 港台番剧
+    policies:
+    - 美国节点🇺🇸
+    - DIRECT
+    - 自行选择
+    - 自动选择
+    - 香港节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/StreamingSE.png
+- select:
+    name: 国内媒体
+    policies:
+    - 美国节点🇺🇸
+    - DIRECT
+    - 自行选择
+    - 自动选择
+    - 香港节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/StreamingCN.png
+- select:
+    name: 国际媒体
+    policies:
+    - 美国节点🇺🇸
+    - 自行选择
+    - 自动选择
+    - DIRECT
+    - 香港节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Streaming.png
+- select:
+    name: 全球加速
+    policies:
+    - 美国节点🇺🇸
+    - 自行选择
+    - 自动选择
+    - DIRECT
+    - 香港节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Global.png
+- select:
+    name: 黑白名单
+    policies:
+    - 美国节点🇺🇸
+    - 自行选择
+    - 自动选择
+    - DIRECT
+    - 香港节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Final.png
+- select:
+    name: 自动选择
+    policies:
+    - 自行选择
+    flatten: true
+    filter: ^
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/Available.png
+- select:
+    name: 香港节点
+    policies:
+    - 自行选择
+    flatten: true
+    filter: 香港|港|HK|🇭🇰|(?i)Hong
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/HK.png
+- select:
+    name: 日本节点
+    policies:
+    - 自行选择
+    flatten: true
+    filter: 日本|日|JP|🇯🇵|(?i)Japan
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/JP.png
+- select:
+    name: 韩国节点
+    policies:
+    - 自行选择
+    flatten: true
+    filter: 韩国|韩|KR|🇰🇷|(?i)Korea
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/KR.png
+- select:
+    name: 狮城节点
+    policies:
+    - 自行选择
+    flatten: true
+    filter: 新加坡|狮|SG|🇸🇬|(?i)Singapore
+    icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/SG.png
+rules:
+- rule_set:
+    match: https://raw.githubusercontent.com/mudong-0126/egern/master/Rule/DivineEngine/Apple.yaml
+    policy: 苹果服务
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Google/Google.yaml
+    policy: 苹果服务
+- rule_set:
+    match: http://script.hub/file/_start_/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list/_end_/Global.list?type=rule-set&target=surge-rule-set&del=true
+    policy: 美国节点🇺🇸
+- rule_set:
+    match: http://script.hub/file/_start_/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list/_end_/Proxy.list?type=rule-set&target=surge-rule-set&del=true
+    policy: 美国节点🇺🇸
+- rule_set:
+    match: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Ruleset/Telegram.yaml
+    policy: 美国节点🇺🇸
+    update_interval: 86400
+- rule_set:
+    match: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Ruleset/Unbreak.yaml
+    policy: 美国节点🇺🇸
+    update_interval: 86400
+- rule_set:
+    match: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Ruleset/Streaming.yaml
+    policy: DIRECT
+    update_interval: 86400
+- rule_set:
+    match: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Ruleset/Global.yaml
+    policy: 美国节点🇺🇸
+    update_interval: 86400
+- rule_set:
+    match: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Ruleset/LAN.yaml
+    policy: 美国节点🇺🇸
+    update_interval: 86400
+- default:
+    policy: DIRECT
+- geoip:
+    match: US
+    policy: 美国节点🇺🇸
+    no_resolve: false
+header_rewrites:
+- delete:
+    match: ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$)
+    name: X-RevenueCat-ETag
+    type: request
+- delete:
+    match: ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$)
+    name: x-revenuecat-etag
+    type: request
+scriptings:
+- http_response:
+    name: iTunes合集
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js
+    update_interval: 5
+    max_size: 120
+    body_required: true
+    binary_body: false
+- http_response:
+    name: Unlock Any Buy Appl
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/popilong/ziyong/main/Shadowrocket/scripts/revenuecat_verify_receipt.js
+    update_interval: 1
+    body_required: true
+- http_response:
+    name: Revenuecat清缓存
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
+    max_size: 131072
+    body_required: true
+- http_response:
+    name: Revenuecat合集
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
+    body_required: true
+- http_response:
+    name: AppRCTesters
+    match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/Auto_RC.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppAdTesters
+    match: https://api.adapty.io/api/v1/sdk/analytics/profiles
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/Adapty.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppFMTesters
+    match: https://order.creativeappnow.com/iap/receipt
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/Facemoji.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppReTesters
+    match: https:\/\/license\.pdfexpert\.com\/api\/2\.0\/(calendarslite|pdfexpert6|documents)\/subscription\/(refresh|check)
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/readdle.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppitTesters
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/iTunes.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppMuTesters
+    match: us-central1-muslim-pro-app.cloudfunctions.net/GetUserPremiumInfo
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/MuslimPro.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppGrTesters
+    match: ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/Grammarly.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppeSTesters
+    match: api.esound.app/account
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/eSound.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppPurTesters
+    match: https://api.purchasely.io/paab/user_purchases
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/purchasely.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppVaTesters
+    match: prod.studysmarter.de/payments/info
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/Vaia.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppQOTesters
+    match: api.qonversion.io/v1/user/init
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/qonversion.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppDJTesters
+    match: https://api.mwm-users.com/me/features
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/edjingMix.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppVCTesters
+    match: https://api-fra.vivacut.com/api/rest/commerce/integrate/vip/perform
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/VivaCut.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppCaTesters
+    match: https://carrotweather.herokuapp.com/parse/functions/findSubscriptionsForUserId
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/Carrot.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppKineTesters
+    match: https://api-account.kinemasters.com/v2/user/subscribe
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/KineMaster.js
+    update_interval: 5
+    body_required: true
+- http_request:
+    name: AppPicTesters
+    match: https://api.picsart.com/gw-v2/shop/subscription/apple/purchases
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/PicsArt.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppAMTesters
+    match: https://us-central1-alight-creative.cloudfunctions.net/getAccountStatusAndLicenses
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/AlightMotion.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppSaTesters
+    match: api.sandbox.love/accounts/current
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/SandBox.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppSSesters
+    match: subscriptions.songshift.com/validate
+    script_url: https://apptesters.org/wp-content/uploads/2024/03/SongShift.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppADBTesters
+    match: api.adblockpro.app/verify
+    script_url: https://apptesters.org/wp-content/uploads/2024/04/AdblockPro.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppADGTesters
+    match: mobile-api.adguard.org/api/2.0/ios_validate_receipt/ADG_EXT
+    script_url: https://apptesters.org/wp-content/uploads/2024/04/AdGuardPro.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppDTesters
+    match: ILoveDevTheDev.com
+    script_url: https://URL2Script.com
+    update_interval: 5
+    body_required: true
+mitm:
+  enabled: true
+  ca_p12: egern.p12
+  ca_passphrase: egern
+  hostnames:
+  - -*.itunes.apple.com
+  - itunes.apple.com
+  - api.revenuecat.com
+  - apple.com
+  - sequoia.apple.com
+  - '*.x-storm.com'
+  - -*.icloud.com
+  - -*.apple.com
+  - -*.buy.itunes.apple.com
+  - api.picsart.com
+  - api-account.kinemasters.com
+  - us-central1-alight-creative.cloudfunctions.net
+  - api.adapty.io
+  - carrotweather.herokuapp.com
+  - order.creativeappnow.com
+  - api.mwm-users.com
+  - us-central1-muslim-pro-app.cloudfunctions.net
+  - prod.studysmarter.de
+  - api.qonversion.io
+  - subscription.grammarly.com
+  - api.esound.app
+  - api.purchasely.io
+  - api.sandbox.love
+  - subscriptions.songshift.com
+  - api.adblockpro.app
+  - mobile-api.adguard.org
+modules:
+- url: https://raw.githubusercontent.com/githubdulong/Script/master/Surge/TestFlight.sgmodule
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/itunes.js/_end_/itunes.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/89996462/Quantumult-X/main/Eric.conf/_end_/Eric.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Surge/module/githubPrivate.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Spec/TestFlight/Moore/TestFlightAccount.sgmodule
+  enabled: false
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Helios12138-king/scripts/master/unlockapp.sgmodule/_end_/unlockapp.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: https://raw.githubusercontent.com/Helios12138-king/scripts/master/SCRIPTS.sgmoudle
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js/_end_/TestFlightAccount.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: false
+- url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Rewrite/BoxJs.yaml
+  enabled: true
+- url: https://github.com/Centralmatrix3/Matrix-io/raw/master/Egern/Rewrite/TestFlightD.yaml
+  enabled: false
+- url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Rewrite/TestFlightA.yaml
+  enabled: false
+- url: https://raw.githubusercontent.com/paynexss/Scripts/main/Surge/StormSnifferCrack.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/external/Surge/TestFlight/TestFlight.sgmodule
+  enabled: true
+- url: https://apptesters.org/egern.yaml
+  enabled: true
+- url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
+  enabled: false
+- url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.tf.sgmodule
+  enabled: false
+- url: https://github.com/huanhutlinh/json-fun/raw/dcd90899647cca702ba6bca47de12cfa579da6ca/modules/Buy-itunes.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/huanhutlinh/json-fun/main/modules/Surfshark.sgmodule
+  enabled: false
+- url: https://raw.githubusercontent.com/FreedomNodes/vpn-script/main/src/surge/AppStore/modules/buy-itunes.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lonely0811/Surge/main/module/truecall.sgmodule
+  enabled: false
+- url: https://github.com/ddgksf2013/Modules/raw/main/RevenueCat.Vip.sgmodule
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js/_end_/itranslate.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: false
+- url: https://raw.githubusercontent.com/popilong/ziyong/main/Shadowrocket/revenuecat.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Surge/Nicegram.sgmodule
+  enabled: false
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/chatai.js/_end_/chatai.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: false
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Yu9191/Rewrite/main/FaceAi.js/_end_/FaceAi.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: false
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Yu9191/Rewrite/main/BabyScript.txt/_end_/BabyScript.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js/_end_/Revenuecat.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/czy13724/Quantumult-X/main/scripts/AlohaVPNbrowser.js/_end_/AlohaVPNbrowser.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/AllInOne/AllInOne.sgmodule
+  enabled: false
+- url: https://raw.githubusercontent.com/ddgksf2013/Modules/main/BuyiTunes.Vip.sgmodule
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/yqc007/QuantumultX/master/DeezerHiFiProCrack.js/_end_/DeezerHiFiProCrack.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/yqc007/QuantumultX/master/TidalHiFiPlusCrack.js/_end_/TidalHiFiPlusCrack.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/tidal.js/_end_/tidal.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/yqc007/QuantumultX/master/QobuzTest.js/_end_/QobuzTest.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: http://script.hub/file/_start_/https://github.com/Yuheng0101/X/raw/main/Scripts/tidal.js/_end_/tidal.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/yqc007/QuantumultX/master/QobuzHiResProCrack.js/_end_/QobuzHiResProCrack.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/gear.js/_end_/gear.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/TestFlightAccount.sgmodule
+  enabled: false
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Yu9191/Rewrite/main/AppRaven.js/_end_/AppRaven.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.beta.surge.sgmodule
+  enabled: true
+- url: https://github.com/chengkongyiban/Egern/raw/main/module/spotify.yaml
+  enabled: true
+- url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge-Noability.sgmodule
+  enabled: false
+- url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge-ability.sgmodule
+  enabled: false
+- url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge-Beta.sgmodule
+  enabled: false
+- url: https://github.com/sub-store-org/Sub-Store/raw/master/config/Surge.sgmodule
+  enabled: true
+- name: 高德去广告
+  url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Rewrite/AMAP.yaml
+  update_interval: 86400
+  enabled: false
+- name: 哔站去广告
+  url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Rewrite/BiliBili.yaml
+  update_interval: 86400
+  enabled: false
+- name: 微博去广告
+  url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Rewrite/WeiBo.yaml
+  update_interval: 86400
+  enabled: false
+- name: 油管去广告
+  url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Rewrite/YouTube.yaml
+  update_interval: 86400
+  enabled: true
+- name: 重定向模块
+  url: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Egern/Rewrite/Redirect.yaml
+  update_interval: 86400
+  enabled: true
+- url: https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Guding.sgmodule
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js/_end_/Reheji.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: false
+- url: http://script.hub/file/_start_/https://github.com/elnfnoosm/iOS_network/raw/main/QuantumultX/Rewrite/allinone@chxm1023/Collections.conf/_end_/Collections.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- name: ''
+  url: https://raw.githubusercontent.com/ddgksf2013/Modules/main/RevenueCat.Vip.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Module/revenucar.sgmodule
+  enabled: true
+- url: http://script.hub/file/_start_/https://github.com/Yu9191/Rewrite/raw/main/Revenuecat.js/_end_/Revenuecat.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
