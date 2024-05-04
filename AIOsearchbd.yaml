@@ -1,0 +1,107 @@
+#!name=聚合搜索
+#!desc=聚合搜索，需将safari搜索引擎设置为百度
+#!author=
+#wk (Wikipedia中文)
+#wiki (Wikipedia)
+# yd  (有道词典)
+# trc  (Google 译至中)
+# tre  (Google 译至英)
+# trj  (Google 译至日)
+# gm (Google图片)
+# gh (GitHub)
+# tf (Google 搜索 TestFlight)
+# wb (微博)
+# wx (微信)
+# jd (京东)
+# tb (淘宝)
+# tm (天猫)
+# ytb (YouTube)
+#vf（voflix视频网站）
+# ph (PornHub)
+# bi (必应)
+# bd (百度)
+# ccn (App Store 临时换至中国区)
+# uus (App Store 临时换至美国区)
+# jjp （APP Store 切换至JP）
+# ttr （APP Store 切换至TR）
+# ddg (DuckDuckGo)
+# 无指令 (Google)
+url_rewrites:
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=wk\+([^&]+)
+    location: https://zh.wikipedia.org/wiki/$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=wiki\+([^&]+)
+    location: https://wikipedia.org/wiki/$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=yd\+([^&]+)
+    location: https://dict.youdao.com/search?q=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=trc\+([^&]+)
+    location: https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=tre\+([^&]+)
+    location: https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=trj\+([^&]+)
+    location: https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=gm\+([^&]+)
+    location: https://www.google.com/search?&tbm=isch&q=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=gh\+([^&]+)
+    location: https://github.com/search?q=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=tf\+([^&]+)
+    location: https://www.google.com/search?as_q=$1&as_sitesearch=testflight.apple.com
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=wb\+([^&]+)
+    location: https://s.weibo.com/weibo/$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=wx\+([^&]+)
+    location: https://weixin.sogou.com/weixinwap?query=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=jd\+([^&]+)
+    location: https://so.m.jd.com/ware/search.action?keyword=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=tb\+([^&]+)
+    location: https://s.m.taobao.com/h5?q=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=tm\+([^&]+)
+    location: https://s.m.tmall.com/m/search.htm?q=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=ytb\+([^&]+)
+    location: https://www.youtube.com/results?search_query=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=vf\+([^&]+)
+    location: https://www.voflix.com/search/-------------.html?wd=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=ph\+([^&]+)
+    location: https://cn.pornhub.com/video/search?search=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=bi\+([^&]+)
+    location: https://cn.bing.com/search?q=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=bd\+([^&]+)
+    location: https://www.baidu.com/s?wd=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=ccn
+    location: https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143465&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=cn&urlDesc=
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=uus
+    location: https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143441&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=us&urlDesc=
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=jjp
+    location: https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143462&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=jp&urlDesc=
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=ttr
+    location: https://itunes.apple.com/WebObjects/MZStore.woa/wa/resetAndRedirect?dsf=143480&mt=8&url=/WebObjects/MZStore.woa/wa/viewSoftware?mt=8&id=1108187390&cc=tr&urlDesc=
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=ddg\+([^&]+)
+    location: https://duckduckgo.com/?ia=about&q=$1
+    status_code: 302
+  - match: ^https:\/\/m\.baidu\.com/s\?from=.+&word=([^&]+)
+    location: https://www.google.com/search?q=$1
+    status_code: 302
+mitm:
+  hostnames:
+    - 'm.baidu.com'
