@@ -1,0 +1,34 @@
+#!name=revenuebabymod2
+#!desc=revenuebabymod2
+
+[URL Rewrite]
+^https?:\/\/app-measurement\.com\/config\/app - reject
+^https?:\/\/firestore\.googleapis\.com - reject
+
+
+[Script]
+#修改
+revenuebabymod2 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenuebabymod2.js, requires-body=true, max-size=-1, timeout=60
+
+#清理
+revenuebabymod2 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenuebabymod2.js, timeout=60
+
+Reheji = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, max-size=-1, timeout=60
+
+Reheji = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, timeout=60
+
+#修改
+Revenuecat = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, requires-body=true, max-size=-1, timeout=60
+
+#清理
+Revenuecat = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, timeout=60
+
+revenueddmori = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueddmori.js, requires-body=true, max-size=-1, timeout=60
+
+revenueddmori = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Mikephie/Script/main/qx/revenueddmori.js, timeout=60
+
+# ～ RevenueCat@ddgksf2013
+BuyiTunesVip = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = api.revenuecat.com, app-measurement.com, firestore.googleapis.com
