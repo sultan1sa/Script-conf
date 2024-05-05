@@ -1,0 +1,182 @@
+mitm:
+  enabled: true
+  ca_p12: egern.p12
+  ca_passphrase: egern
+  hostnames:
+  - api.revenuecat.com
+  - buy.itunes.apple.com
+  - api.picsart.com
+  - api-account.kinemasters.com
+  - us-central1-alight-creative.cloudfunctions.net
+  - api.adapty.io
+  - carrotweather.herokuapp.com
+  - order.creativeappnow.com
+  - api.mwm-users.com
+  - us-central1-muslim-pro-app.cloudfunctions.net
+  - prod.studysmarter.de
+  - api.qonversion.io
+  - subscription.grammarly.com
+  - api.esound.app
+  - api.purchasely.io
+  - api.sandbox.love
+  - subscriptions.songshift.com
+  - api.adblockpro.app
+  - mobile-api.adguard.org
+
+header_rewrites:
+- delete:
+    match: ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$)
+    name: X-RevenueCat-ETag
+    type: request
+- delete:
+    match: ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$)
+    name: x-revenuecat-etag
+    type: request
+
+
+scriptings:
+- http_response:
+    name: AppRCTesters
+    match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+    script_url: https://apptesters.org/wp-content/uploads/AutoRC.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppAdTesters
+    match: https://api.adapty.io/api/v1/sdk/analytics/profiles
+    script_url: https://apptesters.org/wp-content/uploads/Adapty.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppFMTesters
+    match: https://order.creativeappnow.com/iap/receipt
+    script_url: https://apptesters.org/wp-content/uploads/Facemoji.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppReTesters
+    match: https:\/\/license\.pdfexpert\.com\/api\/2\.0\/(calendarslite|pdfexpert6|documents)\/subscription\/(refresh|check)
+    script_url: https://apptesters.org/wp-content/uploads/readdle.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppitTesters
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://apptesters.org/wp-content/uploads/iTunes.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppMuTesters
+    match: us-central1-muslim-pro-app.cloudfunctions.net/GetUserPremiumInfo
+    script_url: https://apptesters.org/wp-content/uploads/MuslimPro.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppGrTesters
+    match: ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$
+    script_url: https://apptesters.org/wp-content/uploads/Grammarly.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppeSTesters
+    match: api.esound.app/account
+    script_url: https://apptesters.org/wp-content/uploads/eSound.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppPurTesters
+    match: https://api.purchasely.io/paab/user_purchases
+    script_url: https://apptesters.org/wp-content/uploads/purchasely.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppVaTesters
+    match: prod.studysmarter.de/payments/info
+    script_url: https://apptesters.org/wp-content/uploads/Vaia.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppQOTesters
+    match: api.qonversion.io/v1/user/init
+    script_url: https://apptesters.org/wp-content/uploads/qonversion.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppDJTesters
+    match: https://api.mwm-users.com/me/features
+    script_url: https://apptesters.org/wp-content/uploads/edjingMix.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppVCTesters
+    match: https://api-fra.vivacut.com/api/rest/commerce/integrate/vip/perform
+    script_url: https://apptesters.org/wp-content/uploads/VivaCut.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppCaTesters
+    match: https://carrotweather.herokuapp.com/parse/functions/findSubscriptionsForUserId
+    script_url: https://apptesters.org/wp-content/uploads/Carrot.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppKineTesters
+    match: https://api-account.kinemasters.com/v2/user/subscribe
+    script_url: https://apptesters.org/wp-content/uploads/KineMaster.js
+    body_required: true
+    update_interval: 5
+- http_request:
+    name: AppPicTesters
+    match: https://api.picsart.com/gw-v2/shop/subscription/apple/purchases
+    script_url: https://apptesters.org/wp-content/uploads/PicsArt.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppAMTesters
+    match: https://us-central1-alight-creative.cloudfunctions.net/getAccountStatusAndLicenses
+    script_url: https://apptesters.org/wp-content/uploads/AlightMotion.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppSaTesters
+    match: api.sandbox.love/accounts/current
+    script_url: https://apptesters.org/wp-content/uploads/SandBox.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppSSesters
+    match: subscriptions.songshift.com/validate
+    script_url: https://apptesters.org/wp-content/uploads/SongShift.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppADBTesters
+    match: api.adblockpro.app/verify
+    script_url: https://apptesters.org/wp-content/uploads/AdblockPro.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppADGTesters
+    match: ^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?)
+    script_url: https://apptesters.org/wp-content/uploads/AdGuardPro.js
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppDTesters
+    match: ILoveDevTheDev.com
+    script_url: https://URL2Script.com
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppDTesters
+    match: ILoveDevTheDev.com
+    script_url: https://URL2Script.com
+    body_required: true
+    update_interval: 5
+- http_response:
+    name: AppDTesters
+    match: ILoveDevTheDev.com
+    script_url: https://URL2Script.com
+    body_required: true
+    update_interval: 5
+
