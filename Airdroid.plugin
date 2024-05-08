@@ -5,4 +5,4 @@
 http-response ^https?:\/\/(pay|id-cast)\.airdroid\.cn\/(cast\/getUserPaymentInfo|user\/getuserinfo) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/airdroid.js, requires-body=true, timeout=60, tag=airdroid
 
 [MITM]
-hostname = *.airdroid.cn
+hostname = *.airdroid.com
