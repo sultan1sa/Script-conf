@@ -1,8 +1,8 @@
-#!name=airdroid
-#!desc=airdroid
+#!name=br
+#!desc=br
 
 [Script]
-http-response ^https?:\/\/(pay|id-cast)\.airdroid\.cn\/(cast\/getUserPaymentInfo|user\/getuserinfo) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/airdroid.js, requires-body=true, timeout=60, tag=airdroid
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://raw.githubusercontent.com/sultan1sa/Script-conf/main/Js/Js, requires-body=true, timeout=60, tag=airdroid
 
 [MITM]
-hostname = *.airdroid.com
+hostname = api.revenuecat.com
