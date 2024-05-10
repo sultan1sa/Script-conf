@@ -1,0 +1,5 @@
+[Script]
+purchasely = type=http-response,script-path=https://apptesters.org/wp-content/uploads/purchasely.js,pattern=https://api.purchasely.io/paab/user_purchases,max-size=131072,timeout=10,script-update-interval=0,enable=true
+AppitTesters = type=http-response,script-path=https://apptesters.org/wp-content/uploads/iTunes.js,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,max-size=131072,requires-body=true,timeout=10,script-update-interval=0,enable=true
+AppAdTesters = type=http-response,script-path=https://apptesters.org/wp-content/uploads/Adapty.js,pattern=https://api.adapty.io/api/v1/sdk/analytics/profiles,max-size=131072,requires-body=true,timeout=5,script-update-interval=0,enable=true
+AppRCTesters = type=http-response,script-path=https://apptesters.org/wp-content/uploads/AutoRC.js,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),max-size=131072,timeout=10,script-update-interval=0,enable=true
