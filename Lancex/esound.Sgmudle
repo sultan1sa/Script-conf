@@ -1,0 +1,8 @@
+#!name=esound 
+#!desc=esound 
+
+[Script]
+zyjh = type=http-response, pattern=api.esound.app/account,script-path=https://apptesters.org/wp-content/uploads/2024/03/eSound.js, requires-body=true, max-size=-5, timeout=60
+
+[MITM]
+hostname = %APPEND% api.esound.app/account
