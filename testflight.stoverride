@@ -1,0 +1,24 @@
+name: |-
+  TestFlightAccount
+desc: |-
+  TestFlightAccount
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1066.png
+
+http:
+
+  mitm:
+    - "testflight.apple.com"
+
+  script:
+    - match: ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/
+      name: "TestFlightAccount_24"
+      type: request
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+script-providers:
+  "TestFlightAccount_24":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
+    interval: 86400
