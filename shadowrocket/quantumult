@@ -159,3 +159,5 @@ https://yfamily.vercel.app/rewrite/thunder.conf, update-interval=172800, opt-par
 https://yfamily.vercel.app/rewrite/aloha.conf, update-interval=172800, opt-parser=false, enabled=true
 https://yfamily.vercel.app/rewrite/nicegram.conf, update-interval=172800, opt-parser=false, enabled=true
 https://yfamily.vercel.app/rewrite/bfs.conf, update-interval=172800, opt-parser=false, enabled=true
+
+hostname = -api.revenuecat.com, -*.apple.com, us-central1-alight-creative.cloudfunctions.net, -*.buy.itunes.apple.com, -*.api.revenuecat.com
