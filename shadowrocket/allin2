@@ -11,28 +11,45 @@
 ^https:\/\/app-measurement\.com\/config\/app\/1?(.*?)*$ - reject
 ^https:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad2? - reject
 ^https:\/\/open3\.vistastory\.com\/v3\/api\/notice\/need_read_notice_number? - reject
-^https:\/\/oxadmin\.cp\.com\.cn\/api\/advertise\/banner - reject-dict
-^https:\/\/oxadmin\.cp\.com\.cn\/api\/hot\/index - reject-dict
 ^https:\/\/rzres86api\.imendon\.com\/v2\/advert\/homelist - reject
 ^https?:\/\/(10play|120play)\.longyuandingyi\.com https://long.longyuandingyi.com/ 302
 ^https?:\/\/(10play|120play)\.longyuandingyi\.com\/ https://long.longyuandingyi.com/ 302
 ^https?:\/\/(10play|h5play)\.longyuandingyi\.com\/ https://long.longyuandingyi.com/ 302
 ^https?:\/\/(99play|99play)\.longyuandingyi\.com https://long.longyuandingyi.com/ 302
 ^https?:\/\/(h5play|10play)\.longyuandingyi\.com https://long.longyuandingyi.com/ 302
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/ - reject-200
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/stats\/batch\/ - reject-200
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/server_bidding\/pre_fetch\/ - reject-200
-^https?:\/\/api\.tipsoon\.com\/api\/v1\/top\/ad - reject-img
-^https?:\/\/credits\.bz\.mgtv\.com\/credits\/url - reject-dict
-^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ - reject-200
-^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/skin\/config - reject-dict
-^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?_support - reject-200
-^https?:\/\/mobile\.da\.mgtv\.com\/json\/app\/bdboot - reject-200
-^https?:\/\/nuc\.api\.mgtv.com\/Logout - reject-200
-^https?:\/\/pcvideoyd\.titan\.mgtv\.com\/pb\/ - reject-img
-^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ - reject-200
-^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/package\.json - reject-200
-^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry - reject-dict
+
+[Map Local]
+^https:\/\/oxadmin\.cp\.com\.cn\/api\/advertise\/banner data-type=text data="{}" status-code=200
+
+^https:\/\/oxadmin\.cp\.com\.cn\/api\/hot\/index data-type=text data="{}" status-code=200
+
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/ data-type=text data=" " status-code=200
+
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/stats\/batch\/ data-type=text data=" " status-code=200
+
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/server_bidding\/pre_fetch\/ data-type=text data=" " status-code=200
+
+^https?:\/\/api\.tipsoon\.com\/api\/v1\/top\/ad data-type=tiny-gif status-code=200
+
+^https?:\/\/credits\.bz\.mgtv\.com\/credits\/url data-type=text data="{}" status-code=200
+
+^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ data-type=text data=" " status-code=200
+
+^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/skin\/config data-type=text data="{}" status-code=200
+
+^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?_support data-type=text data=" " status-code=200
+
+^https?:\/\/mobile\.da\.mgtv\.com\/json\/app\/bdboot data-type=text data=" " status-code=200
+
+^https?:\/\/nuc\.api\.mgtv.com\/Logout data-type=text data=" " status-code=200
+
+^https?:\/\/pcvideoyd\.titan\.mgtv\.com\/pb\/ data-type=tiny-gif status-code=200
+
+^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ data-type=text data=" " status-code=200
+
+^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/package\.json data-type=text data=" " status-code=200
+
+^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry data-type=text data="{}" status-code=200
 
 [Script]
 accuWeather = type=http-response, pattern=https://app-subscription-proxy.accuweather.com/subscriptions/v1/apple/validate, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/accuWeather.js, requires-body=true, max-size=-1, timeout=60
@@ -925,4 +942,5 @@ UnblockURLinWeChat = type=http-response, pattern=^https\:\/\/(weixin110\.qq|secu
 zmzjz = type=http-response, pattern=^https:\/\/fufei\.fengyunsoft\.cn\/api\/client\/info, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/zmzjz.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% boxjs.com, boxjs.net, sub.store, youtubei.googleapis.com,*.aoscdn.com,*.cyapi.cn,*.emby.wtf,*.jmsooo.com,*.kuwo.cn,*.lrts.me,*.mb3admin.com,*.oracle.bendingspoonsapps.com,*.plusmedia.site,*.pornhub.com,*.uve.weibo.com,*.xiuxiu.meitu.com,*.yangjibao.com,*.youtube.com,*appraven.net,*wps*,*xiaozujian,ap*.intsig.net,api.meiease.cn,api.tipsoon.com,api.weibo.cn,api.xiuxiu.meitu.com,api4.bybutter.com,app.biliapi.net,app.bilibili.com,app.biliintl.com,app.yiyan.art,appwk.baidu.com,boxes.net,boxjs.com,claritywallpaper.com,cn-acs.m.cainiao.com,cupfox.app,explorer.tratao.com,gateway.caixin.com,guide-acs.m.taobao.com,ipadcms.caixin.com,lchttpapi.xczim.com,license.enpass.io,m.douban.com,mapi.weibo.com,mb3admin.com,mobile.flightradar24.com,nicegram.cloud,notability.com,pan.baidu.com,restore-access.indream.app,security.wechat.com,server.zbisq.com,spclient.wg.spotify.com,sub.store,testflight.apple.com,ticktick.com,upos-hz-mirrorakam.akamaized.net,wallpaper.soutushenqi.com,weixin110.qq.com,www.bing.com,api.revenuecat.com,buy.itunes.apple.com,api-v3.speedtest.cn,api.picsart.com,api-account.kinemasters.com,us-central1-alight-creative.cloudfunctions.net,api.adapty.io,carrotweather.herokuapp.com,order.creativeappnow.com,api.mwm-users.com,us-central1-muslim-pro-app.cloudfunctions.net,prod.studysmarter.de,api.qonversion.io,subscription.grammarly.com,api.esound.app,api.purchasely.io,api.sandbox.love,subscriptions.songshift.com,api.adblockpro.app,mobile-api.adguard.org, app-measurement.com, firestore.googleapis.com
+hostname = %APPEND% boxjs.com, boxjs.net, sub.store, youtubei.googleapis.com, *.aoscdn.com, *.cyapi.cn, *.emby.wtf, *.jmsooo.com, *.kuwo.cn, *.lrts.me, *.mb3admin.com, *.oracle.bendingspoonsapps.com, *.plusmedia.site, *.pornhub.com, *.uve.weibo.com, *.xiuxiu.meitu.com, *.yangjibao.com, *.youtube.com, *appraven.net, *wps*, *xiaozujian, ap*.intsig.net, api.meiease.cn, api.tipsoon.com, api.weibo.cn, api.xiuxiu.meitu.com, api4.bybutter.com, app.biliapi.net, app.bilibili.com, app.biliintl.com, app.yiyan.art, appwk.baidu.com, boxes.net, claritywallpaper.com, cn-acs.m.cainiao.com, cupfox.app, explorer.tratao.com, gateway.caixin.com, guide-acs.m.taobao.com, ipadcms.caixin.com, lchttpapi.xczim.com, license.enpass.io, m.douban.com, mapi.weibo.com, mb3admin.com, mobile.flightradar24.com, nicegram.cloud, notability.com, pan.baidu.com, restore-access.indream.app, security.wechat.com, server.zbisq.com, spclient.wg.spotify.com, testflight.apple.com, ticktick.com, upos-hz-mirrorakam.akamaized.net, wallpaper.soutushenqi.com, weixin110.qq.com, www.bing.com, api.revenuecat.com, buy.itunes.apple.com, api-v3.speedtest.cn, api.picsart.com, api-account.kinemasters.com, us-central1-alight-creative.cloudfunctions.net, api.adapty.io, carrotweather.herokuapp.com, order.creativeappnow.com, api.mwm-users.com, us-central1-muslim-pro-app.cloudfunctions.net, prod.studysmarter.de, api.qonversion.io, subscription.grammarly.com, api.esound.app, api.purchasely.io, api.sandbox.love, subscriptions.songshift.com, api.adblockpro.app, mobile-api.adguard.org, app-measurement.com, firestore.googleapis.com
+
