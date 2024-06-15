@@ -2,21 +2,11 @@
 #!desc=Marol
 
 [URL Rewrite]
-#^https?:\/\/(.*.*.)\/users\/me url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Busuu.js
-(?<=vip=)false true 302
-^(https?:\/\/\D.+)(&src=mgtv.*?&testversion=&)(ticket=\w{32})(.+) $1$2ticket=2031287C725A39BE8D5F5E2FF31D57AB$4 302
-^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/stats\/batch\/?aid=5000546&version_code=4\.8\.0\.8&device_platform=iphone - reject
-^https:\/\/api\.sevenworkouts\.com\/api\/v1\/account\/subscription-purchases - reject
-^https:\/\/api\.sevenworkouts\.com\/api\/v1\/buyers\/ - reject
+^https?:\/\/app-measurement\.com\/config\/app - reject
+^https?:\/\/firestore\.googleapis\.com - reject
+
 ^https:\/\/app-measurement\.com\/config\/app\/1?(.*?)*$ - reject
-^https:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad2? - reject
-^https:\/\/open3\.vistastory\.com\/v3\/api\/notice\/need_read_notice_number? - reject
-^https:\/\/rzres86api\.imendon\.com\/v2\/advert\/homelist - reject
-^https?:\/\/(10play|120play)\.longyuandingyi\.com https://long.longyuandingyi.com/ 302
-^https?:\/\/(10play|120play)\.longyuandingyi\.com\/ https://long.longyuandingyi.com/ 302
-^https?:\/\/(10play|h5play)\.longyuandingyi\.com\/ https://long.longyuandingyi.com/ 302
-^https?:\/\/(99play|99play)\.longyuandingyi\.com https://long.longyuandingyi.com/ 302
-^https?:\/\/(h5play|10play)\.longyuandingyi\.com https://long.longyuandingyi.com/ 302
+
 
 [Map Local]
 ^https:\/\/oxadmin\.cp\.com\.cn\/api\/advertise\/banner data-type=text data="{}" status-code=200
@@ -52,6 +42,9 @@
 ^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry data-type=text data="{}" status-code=200
 
 [Script]
+heji = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/heji.js, requires-body=true, max-size=-1, timeout=60
+
+heji = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/heji.js, timeout=60
 accuWeather = type=http-response, pattern=https://app-subscription-proxy.accuweather.com/subscriptions/v1/apple/validate, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/accuWeather.js, requires-body=true, max-size=-1, timeout=60
 
 adobe = type=http-response, pattern=https://lcs-mobile-cops.adobe.io/mobile_profile/nul/v2, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/adobe.js, requires-body=true, max-size=-1, timeout=60
