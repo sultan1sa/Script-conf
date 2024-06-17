@@ -82,17 +82,10 @@ revenuecat_2 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/
 revenuecat1 = type=http-response,pattern= ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://ghproxy.com/https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js,script-update-interval=0
 revenuecat2 = type=http-request,pattern= ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://ghproxy.com/https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js,script-update-interval=0
 sjyz = type=http-response,pattern= ^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/.*\/?(.*?)*$,requires-body=1,max-size=0,script-path=https://ghproxy.com/https://raw.githubusercontent.com/chxm1023/Rewrite/main/sjyz.js,script-update-interval=0
-
-
-#>🟢🟢UserScript🟡🟡<#
 # 🟣iTunes🟣 > 解锁系列
 iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://ghproxy.com/https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js,script-update-interval=0
-
-
 #03 > 🟢ChatGPT 解锁 Plus 订阅
 ChatGPT = type=http-response,pattern=^https?:\/\/ios\.chat\.openai\.com\/backend-api\/(accounts\/check\/|models),requires-body=1,max-size=0,script-path=https://ghproxy.com/https://raw.githubusercontent.com/yqc007/QuantumultX/master/ChatGPTPlusCrack.js,script-update-interval=0
-
-[Script]
 trancy = type=http-response, pattern=^https?:\/\/api\.trancy\.org\/1\/user\/profile, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/trancy.js, requires-body=true, max-size=-1, timeout=60
 receipts = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/qingsiguan/mima/main/cat, requires-body=true, max-size=-1, timeout=60
 subscribers = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/qingsiguan/mima/main/cat, timeout=60
