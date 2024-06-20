@@ -2,7 +2,7 @@ const pyer1 = {};
 const pyer2 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
 const names = $persistentStore.read("name") ? $persistentStore.read("name").split(",") : [];
-const appids = $persistentStore.read("appid") ? $persistentStore.read("appid").split(",") : [];
+const appids = $persistentStore.read("com.tk.client.lifetime") ? $persistentStore.read("com.tk.client.lifetime").split(",") : [];
 const forever = JSON.parse($persistentStore.read("forever"));
 
 if (typeof $response == "undefined") {
@@ -17,7 +17,7 @@ if (typeof $response == "undefined") {
     const name = names[i];
     const appid = appids[i];
 		let data = {
-      "product_identifier": appid
+      "product_identifier": com.tk.client.lifetime
     };
     if (forever) {
       data = {
