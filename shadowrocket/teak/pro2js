@@ -17,7 +17,7 @@ if (typeof $response == "undefined") {
     const name = pro_lt[i];
     const appid = appids[i];
 		let data = {
-      "product_identifier": appid
+      "product_identifier": com.tk.client.lifetime
     };
     if (forever) {
       data = {
