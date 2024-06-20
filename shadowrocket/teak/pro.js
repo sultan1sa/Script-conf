@@ -1,8 +1,8 @@
 const pyer1 = {};
 const pyer2 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
-const names = $persistentStore.read("pro_lt") ? $persistentStore.read("pro_lt").split(",") : [];
-const appids = $persistentStore.read("com.tk.client.lifetime") ? $persistentStore.read("com.tk.client.lifetime").split(",") : [];
+const names = $persistentStore.read("name") ? $persistentStore.read("name").split(",") : [];
+const appids = $persistentStore.read("appid") ? $persistentStore.read("appid").split(",") : [];
 const forever = JSON.parse($persistentStore.read("forever"));
 
 if (typeof $response == "undefined") {
@@ -14,10 +14,10 @@ if (typeof $response == "undefined") {
   pyer2.subscriber.entitlements = pyer2.subscriber.entitlements || {};
 
   for (let i = 0; i < names.length && i < appids.length; i++) {
-    const name = pro_lt[i];
-    const appid = com.tk.client.lifetime[i];
+    const name = names[i];
+    const appid = appids[i];
 		let data = {
-      "product_identifier": com.tk.client.lifetime
+      "product_identifier": appid
     };
     if (forever) {
       data = {
@@ -32,8 +32,8 @@ if (typeof $response == "undefined") {
       };
     }
 
-    pyer2.subscriber.entitlements[pro_lt] = data;
-    pyer2.subscriber.subscriptions[com.tk.client.lifetime] = {  
+    pyer2.subscriber.entitlements[name] = data;
+    pyer2.subscriber.subscriptions[appid] = {  
       ...data,
       "original_purchase_date": "2023-09-09T09:09:09Z",
       "store": "app_store",
