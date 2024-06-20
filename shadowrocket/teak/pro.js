@@ -14,8 +14,8 @@ if (typeof $response == "undefined") {
   pyer2.subscriber.entitlements = pyer2.subscriber.entitlements || {};
 
   for (let i = 0; i < names.length && i < appids.length; i++) {
-    const name = names[pro_lt];
-    const appid = appids[com.tk.client.lifetime];
+    const name = names[i];
+    const appid = appids[i];
 		let data = {
       "product_identifier": appid
     };
@@ -32,8 +32,8 @@ if (typeof $response == "undefined") {
       };
     }
 
-    pyer2.subscriber.entitlements[pro_lt] = data;
-    pyer2.subscriber.subscriptions[com.tk.client.lifetime] = {  
+    pyer2.subscriber.entitlements[name] = data;
+    pyer2.subscriber.subscriptions[appid] = {  
       ...data,
       "original_purchase_date": "2023-09-09T09:09:09Z",
       "store": "app_store",
