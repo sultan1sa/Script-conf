@@ -73,8 +73,6 @@ AppADBTesters = type=http-response,pattern=api.adblockpro.app/verify,requires-bo
 
 AppADGTesters = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?),requires-body=1,max-size=0,binary-body-mode=0,script-path=https://apptesters.org/wp-content/uploads/AdGuardPro.js,script-update-interval=5
 
-AppDTesters = type=http-response,pattern=ILoveDevTheDev.com,requires-body=1,max-size=0,binary-body-mode=0,script-path=https://URL2Script.com,script-update-interval=5
-
 revenuecat_1 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/leey668/pyer/main/revenuecat.js, requires-body=true, timeout=60
 
 revenuecat_2 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/leey668/pyer/main/revenuecat.js, timeout=60
