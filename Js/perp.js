@@ -1,10 +1,11 @@
 /*************************************
 
 项目名称：Revenuecat 系列解锁合集
+/*************************************
 [rewrite_local]
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/sultan1sa/Script-conf/main/Js/perp.js
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/sultan1sa/Script-conf/main/Js/perp.js
-/*************************************
+
 [mitm]
 hostname = api.revenuecat.com
 
