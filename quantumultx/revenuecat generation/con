@@ -6,7 +6,9 @@
 Loon/Surge
 http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$  script-path= https://raw.githubusercontent.com/sultan1sa/Script-conf/main/quantumultx/revenuecat%20generation/con, requires-bpdy=true, tag=VSCO会员解锁
 
-MitM = api.revenuecat.com
+[mitm]
+
+hostname = api.revenuecat.com
 
 */
 let obj = {
