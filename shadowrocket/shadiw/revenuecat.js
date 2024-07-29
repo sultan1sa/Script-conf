@@ -15,19 +15,19 @@ hostname = api.revenuecat.com
 // ========= 动态ID ========= //
 const entitlementMapping = {
   //'User-Agent':['权益名称','订阅标识符']
-  'Aphrodite': ['all'],
+  'Aphrodite': ['unlock','com.overdesigned.incognito.lifetime'],
   'OneBox':['all', 'com.ziheng.OneBox'],
   'apollo': ['all'],
   'VSCO': ['membership'],
   'CountDuck': ['premium', 'Lifetime'],
   'Happy%3ADays': ['pro', 'happy_999_lifetime'],
   'Awesome%20Habits': ['premium'],
-  'Anybox': ['pro'],
+  'com.overdesigned.incognito.lifetime': ['unlock'],
   'Grow': ['grow.pro', 'grow_lifetime'],
   'Planny': ['premium'],
   'mizframa': ['premium', 'mf_20_lifetime2'],
   'Overdue': ['Pro'],//我的物品
-  '%E4%BA%8B%E7%BA%BF': ['pro','xyz.jiaolong.eventline.pro.lifetime'],//事线
+  '%E4%BA%8B%E7%BA%BF': ['bot_builder','bot_builder_subscription_annual'],//事线
   'GetFace': ['Pro access'],//FaceGlow
 };
 
