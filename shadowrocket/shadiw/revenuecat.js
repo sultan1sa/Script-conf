@@ -4,7 +4,7 @@ Aphrodite、Pandora、Apollo、VSCO、CountDuck、Happy Days、Awesome Habits、
 
 [rewrite_local]
 
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://raw.githubusercontent.com/alalalex-m/AlQuantumult/main/Scripts/revenueCat.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://raw.githubusercontent.com/sultan1sa/Script-conf/main/shadowrocket/shadiw/revenuecat.js
 ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url request-header (\r\n)X-RevenueCat-ETag:.+(\r\n) request-header $1X-RevenueCat-ETag:$2
 
 [MITM]
