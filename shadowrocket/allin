@@ -2,9 +2,50 @@
 #!desc=Marol
 
 [URL Rewrite]
-https://pangolin.snssdk.com/api/ad/union/sdk/get_ads/ - reject-200
+^https:\/\/app-measurement\.com\/config\/app\/1?(.*?)*$ - reject
+http-response ^https?://api\.revenuecat\.com/.+/(receipts$|subscribers/?(.*?)*$) header-del X-RevenueCat-ETag
+http-response ^https?://api\.revenuecat\.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad REJECT-200 
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/2023djash/2023djash/main/js/RevenuecatHeji.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/2023djash/2023djash/main/js/RevenuecatHeji.js
+^(http|https):\/\/api\.revenuecat\.com\/v1\/subscribers\/(?!.*\/(offerings|attributes|adservices_attribution)$).* https://api.revenuecat.com/v1/product_entitlement_mapping 307
+########################################
+
+[Header Rewrite]
+http-response ^https?://api\.revenuecat\.com/.+/(receipts$|subscribers/?(.*?)*$) header-del X-RevenueCat-ETag
+http-response ^https?://api\.revenuecat\.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag
+########################################
 
 [Script]
+Nicegram = type=http-request, pattern=https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10}, script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Nicegram.js/_end_/Nicegram.js?type=mock&target-app=shadowrocket-module, timeout=60
+budingsuoping = type=http-request, pattern=https?:\/\/screen-lock\.51wnl-cq\.com\/userApi\/saveUser, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/budingsuoping.js, timeout=60
+ScriptHub = type=http-request, pattern=^https?:\/\/script\.hub\/($|edit\/|reload), script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js, timeout=300
+Script-Hub = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module), script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js, timeout=300
+ScriptHub = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js, timeout=300
+ScriptHub = type=http-request, pattern=^https?:\/\/script\.hub\/convert\/, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js, timeout=300
+AppRCTesters = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://apptesters.org/wp-content/uploads/AutoRC.js, requires-body=true, max-size=-1, script-update-interval=5, timeout=30
+AppAdTesters = type=http-response, pattern=https://api.adapty.io/api/v1/sdk/analytics/profiles, script-path=https://apptesters.org/wp-content/uploads/Adapty.js, requires-body=true, max-size=0, script-update-interval=5
+AppFMTesters = type=http-response, pattern=https://order.creativeappnow.com/iap/receipt, script-path=https://apptesters.org/wp-content/uploads/Facemoji.js, requires-body=true, max-size=0, script-update-interval=5
+AppReTesters = type=http-response, pattern=https:\/\/license\.pdfexpert\.com\/api\/2\.0\/(calendarslite|pdfexpert6|documents)\/subscription\/(refresh|check), script-path=https://apptesters.org/wp-content/uploads/readdle.js, requires-body=true, max-size=0, script-update-interval=5
+AppitTesters = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://apptesters.org/wp-content/uploads/iTunes.js, requires-body=true, max-size=0, script-update-interval=5
+AppMuTesters = type=http-response, pattern=us-central1-muslim-pro-app.cloudfunctions.net/GetUserPremiumInfo, script-path=https://apptesters.org/wp-content/uploads/MuslimPro.js, requires-body=true, max-size=0, script-update-interval=5
+AppGrTesters = type=http-response, pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://apptesters.org/wp-content/uploads/Grammarly.js, requires-body=true, max-size=0, script-update-interval=5
+AppeSTesters = type=http-response, pattern=api.esound.app/account, script-path=https://apptesters.org/wp-content/uploads/eSound.js, requires-body=true, max-size=0, script-update-interval=5
+AppPurTesters = type=http-response, pattern=https://api.purchasely.io/paab/user_purchases, script-path=https://apptesters.org/wp-content/uploads/purchasely.js, requires-body=true, max-size=0, script-update-interval=5
+AppVaTesters = type=http-response, pattern=prod.studysmarter.de/payments/info, script-path=https://apptesters.org/wp-content/uploads/Vaia.js, requires-body=true, max-size=0, script-update-interval=5
+AppQOTesters = type=http-response, pattern=api.qonversion.io/v1/user/init, script-path=https://apptesters.org/wp-content/uploads/qonversion.js, requires-body=true, max-size=0, script-update-interval=5
+AppDJTesters = type=http-response, pattern=https://api.mwm-users.com/me/features, script-path=https://apptesters.org/wp-content/uploads/edjingMix.js, requires-body=true, max-size=0, script-update-interval=5
+AppVCTesters = type=http-response, pattern=https://api-fra.vivacut.com/api/rest/commerce/integrate/vip/perform, script-path=https://apptesters.org/wp-content/uploads/VivaCut.js, requires-body=true, max-size=0, script-update-interval=5
+AppCaTesters = type=http-response, pattern=https://carrotweather.herokuapp.com/parse/functions/findSubscriptionsForUserId, script-path=https://apptesters.org/wp-content/uploads/Carrot.js, requires-body=true, max-size=0, script-update-interval=5
+AppKineTesters = type=http-response, pattern=https://api-account.kinemasters.com/v2/user/subscribe, script-path=https://apptesters.org/wp-content/uploads/KineMaster.js, requires-body=true, max-size=0, script-update-interval=5
+AppPicTesters = type=http-request, pattern=https://api.picsart.com/gw-v2/shop/subscription/apple/purchases, script-path=https://apptesters.org/wp-content/uploads/PicsArt.js, requires-body=true, max-size=0, script-update-interval=5
+AppAMTesters = type=http-response, pattern=https://us-central1-alight-creative.cloudfunctions.net/getAccountStatusAndLicenses, script-path=https://apptesters.org/wp-content/uploads/AlightMotion.js, requires-body=true, max-size=0, script-update-interval=5
+AppSaTesters = type=http-response, pattern=api.sandbox.love/accounts/current, script-path=https://apptesters.org/wp-content/uploads/SandBox.js, requires-body=true, max-size=0, script-update-interval=5
+AppSSesters = type=http-response, pattern=subscriptions.songshift.com/validate, script-path=https://apptesters.org/wp-content/uploads/SongShift.js, requires-body=true, max-size=-1, script-update-interval=5
+AppADBTesters = type=http-response, pattern=api.adblockpro.app/verify, script-path=https://apptesters.org/wp-content/uploads/AdblockPro.js, requires-body=true, max-size=0, script-update-interval=5
+AppADGTesters = type=http-response, pattern=^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?), script-path=https://apptesters.org/wp-content/uploads/AdGuardPro.js, requires-body=true, max-size=0, script-update-interval=5
+
+
 accuWeather = type=http-response, pattern=https://app-subscription-proxy.accuweather.com/subscriptions/v1/apple/validate, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/accuWeather.js, requires-body=true, max-size=-1, timeout=60
 
 adobe = type=http-response, pattern=https://lcs-mobile-cops.adobe.io/mobile_profile/nul/v2, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/adobe.js, requires-body=true, max-size=-1, timeout=60
