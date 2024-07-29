@@ -3,18 +3,14 @@
 
 [URL Rewrite]
 ^https:\/\/app-measurement\.com\/config\/app\/1?(.*?)*$ - reject
-http-response ^https?://api\.revenuecat\.com/.+/(receipts$|subscribers/?(.*?)*$) header-del X-RevenueCat-ETag
-http-response ^https?://api\.revenuecat\.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad REJECT-200 
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/2023djash/2023djash/main/js/RevenuecatHeji.js
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/2023djash/2023djash/main/js/RevenuecatHeji.js
+^https?:\/\/firestore\.googleapis\.com - reject
 ^(http|https):\/\/api\.revenuecat\.com\/v1\/subscribers\/(?!.*\/(offerings|attributes|adservices_attribution)$).* https://api.revenuecat.com/v1/product_entitlement_mapping 307
-########################################
 
 [Header Rewrite]
 http-response ^https?://api\.revenuecat\.com/.+/(receipts$|subscribers/?(.*?)*$) header-del X-RevenueCat-ETag
 http-response ^https?://api\.revenuecat\.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag
-########################################
+
+
 
 [Script]
 Nicegram = type=http-request, pattern=https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10}, script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Nicegram.js/_end_/Nicegram.js?type=mock&target-app=shadowrocket-module, timeout=60
