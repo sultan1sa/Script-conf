@@ -17,6 +17,12 @@ const entitlementMapping = {
   //'User-Agent':['权益名称','订阅标识符']
   'Aphrodite': ['unlock','com.overdesigned.incognito.lifetime'],
   'OneBox':['all', 'com.ziheng.OneBox'],
+    'askai': ['pro', 'aa_0199_1w'],
+  'madeyu': ['unlimited', 'my_999_1m'],
+  'Grow': ['grow.pro', 'grow_lifetime'],
+  'Grow': ['grow.pro', 'grow_lifetime'],
+  'Grow': ['grow.pro', 'grow_lifetime'],
+  'Locket': ['Gold'],
   'apollo': ['all'],
   'VSCO': ['membership'],
   'CountDuck': ['premium', 'Lifetime'],
