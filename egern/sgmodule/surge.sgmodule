@@ -14,7 +14,7 @@ scriptings:
     timeout: 60
     body_required: true
 - http_response:
-    name: chat
+    name: chat 
     match: https://api.adapty.io/api/v1/sdk/in-apps/apple/receipt/validate/
     script_url: https://paste.gg/p/anonymous/30a2757c556d433283ccf8d3fb01d281/files/4202a53e1ca34655a46eb547d6d82486/raw
     timeout: 10
