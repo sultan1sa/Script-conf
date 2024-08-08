@@ -1,0 +1,1035 @@
+name: sure
+description: sure
+scriptings:
+- http_response:
+    name: tochat-
+    match: https://firebaseinstallations.googleapis.com/v1/projects/rochat-395002/installations
+    script_url: Rochat.js
+    timeout: 10
+    body_required: true
+- http_response:
+    name: rochat
+    match: https://api.rochathub.com/inteco.user.v1.UserRightsService/GetUserRights
+    script_url: https://raw.githubusercontent.com/qingsiguan/mima/main/ro
+    timeout: 60
+    body_required: true
+- http_response:
+    name: chat
+    match: https://api.adapty.io/api/v1/sdk/in-apps/apple/receipt/validate/
+    script_url: https://paste.gg/p/anonymous/30a2757c556d433283ccf8d3fb01d281/files/4202a53e1ca34655a46eb547d6d82486/raw
+    timeout: 10
+    body_required: true
+- http_response:
+    name: mIl10
+    match: ^https?:\/\/api\.apphud\.com\/v1\/subscriptions
+    script_url: https://paste.gg/p/anonymous/d3692a6c5a4c46609d263e1cc242819a/files/64095f42ee6f4314b8bffcb76eb0df9c/raw
+    timeout: 10
+    body_required: true
+- http_request:
+    name: YouTube-Ad-Blocker
+    match: ^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A)
+    script_url: https://choler.github.io/Surge/Script/YouTube.js
+- http_request:
+    name: YouTube
+    match: https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)
+    script_url: https://choler.github.io/Surge/Script/YouTube.js
+- http_response:
+    name: JJSZ
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Rnik666/YJTJS/main/JJSZ.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: GLOBEDQ
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/receipts
+    script_url: https://raw.githubusercontent.com/Rnik666/YJTJS/main/GLOBEDQ.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: .com/Rnik666/YJTJS/main/
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/receipts
+    script_url: https://raw.githubusercontent.com/Rnik666/YJTJS/main/Mizframa
+    timeout: 60
+    body_required: true
+- http_response:
+    name: FXDD
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Rnik666/YJTJS/main/FXDD.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: GIF
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Rnik666/YJTJS/main/GIF.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: YYXJ
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Rnik666/YJTJS/main/YYXJ.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Chat%20AI
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Rnik666/YJTJS/main/Chat%20AI.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: YYJSQ
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Rnik666/YJTJS/main/YYJSQ.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: context
+    match: ^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/(.+)\/offerings
+    script_url: https://raw.githubusercontent.com/leey668/pyer/main/context.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: ffxj
+    match: ^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/(.+)\/offerings
+    script_url: https://raw.githubusercontent.com/leey668/pyer/main/ffxj.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: limicam
+    match: ^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/(.+)\/offerings
+    script_url: https://raw.githubusercontent.com/leey668/pyer/main/limicam.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Liqingzhao
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Liqingzhao.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Meme
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Meme.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Mindkit
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Mindkit.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: '1001'
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/1001.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: 3Dscanner
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/3Dscanner.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: 6fzyy
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/6fzyy.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Again
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Again.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Ailinghui
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Ailinghui.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: BodyTune
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/BodyTune.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: CapyMood
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/CapyMood.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: ECG
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/ECG.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: EWA
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/EWA.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Iam
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Iam.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Jiazigu
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Jiazigu.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: JisuanqiAir
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/JisuanqiAir.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Mondly
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Mondly.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Motivation
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Motivation.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: NYFM
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/NYFM.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: OfflineMusicPlayer
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/OfflineMusicPlayer.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: PicPro
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/PicPro.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: PicsLeap
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/PicsLeap.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: PrettyUp
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/PrettyUp.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: ProFit
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/ProFit.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Ptime
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Ptime.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: RSBJ
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/RSBJ.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: RZJThb
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/RZJThb.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: RitmoVideo
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/RitmoVideo.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Side
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Side.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: StandByUs
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/StandByUs.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Storybeat
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Storybeat.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Xk
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Xk.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: bbaabbyy
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/bbaabbyy.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: bizhi
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/bizhi.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: bs
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/bs.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: celiangyuan
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/celiangyuan.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: cwd
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/cwd.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: daanjl
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/daanjl.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: dingdangdaiban
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/dingdangdaiban.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: dzyj
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/dzyj.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: guangyingxiutu
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/guangyingxiutu.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: jrxy
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/jrxy.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: jzxd
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/jzxd.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: lunwenjun
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/lunwenjun.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: moguixiangji
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/moguixiangji.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: pdfReaderfree
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/pdfReaderfree.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: pdfpro
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/pdfpro.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: pollykann
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/pollykann.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: pthxx
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/pthxx.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: qianbihua
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/qianbihua.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: shoton
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/shoton.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: shudu
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/shudu.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: smartgym
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/smartgym.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: spxz
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/spxz.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: sssmjc
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/sssmjc.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: wmyx
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/wmyx.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: xgn
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/xgn.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: yytt
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/yytt.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: yyxw
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/yyxw.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: yyyj
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/yyyj.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: zhouzhouji
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/zhouzhouji.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: ztqs
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/ztqs.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: zyjh
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/zyjh.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: linggan
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/linggan.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: wanyuanyuedu
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/wanyuanyuedu.js
+    timeout: 60
+    body_required: true
+- http_request:
+    name: Photomator
+    match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Photomator.js
+    timeout: 60
+- http_request:
+    name: jieyadonghua
+    match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/jieyadonghua.js
+    timeout: 60
+- http_request:
+    name: zettelbox
+    match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/zettelbox.js
+    timeout: 60
+- http_response:
+    name: Photomator
+    match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Photomator.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: jieyadonghua
+    match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/jieyadonghua.js
+    timeout: 60
+    body_required: true
+- http_request:
+    name: Revenuecat
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
+    timeout: 60
+- http_response:
+    name: Lifelog
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://github.com/Yu9191/Rewrite/raw/main/Lifelog.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Context
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Context.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Light
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Light.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Lungy
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Lungy.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Photon
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Photon.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Emoji+
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Reven/Emoji+.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Revenuecat
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Stresswatch
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Stresswatch.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Tico
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Tico.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Touchretouch
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Touchretouch.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: aptv
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/aptv.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: diangongjsq
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/diangongjsq.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: paike
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/paike.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: rsqd
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/rsqd.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: spark
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/spark.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: wyww
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/wyww.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: xiangjiyin
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiangjiyin.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: xinxijs
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/xinxijs.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: yiqiqici
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/yiqiqici.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: zettelbox
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/zettelbox.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: zhongguofalv
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/zhongguofalv.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: zxhdmx
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/zxhdmx.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: 168qingduanshi
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/168qingduanshi.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: BeatMakerGo
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/BeatMakerGo.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: DVD
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/DVD.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: OldRoll
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/OldRoll.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: chanji
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/chanji.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: daofangtiaozhan
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/daofangtiaozhan.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: dingyuetong
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/dingyuetong.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: hesheng
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/hesheng.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: iTunes
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/iTunes.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: yzqnw
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/yzqnw.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: lksyxj
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/lksyxj.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: qbbj
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/qbbj.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: smartai
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/smartai.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: vibee
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/vibee.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: videoday
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/videoday.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: wmgq
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/wmgq.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: wunian
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/wunian.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: xiaorichang
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaorichang.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: xiongzhangji
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiongzhangji.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: yaseliulanqi
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/yaseliulanqi.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: znzdw
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/znzdw.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: xTerminal
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/xTerminal.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: fotoz
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/fotoz.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: imgplay
+    match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+    script_url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/imgplay.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: DarkRoom
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/DarkRoom.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Drops
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Drops.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Persona
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Persona.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: PureLibro
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/PureLibro.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Purejizhang
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Purejizhang.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Snipd
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Snipd.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Speak
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Speak.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: TransmissionHub
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/TransmissionHub.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: chatliankouyu
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/chatliankouyu.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: iHabit
+    match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/iHabit.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: kuaizhitubiao
+    match: https://api.revenuecat.com/v1/receipts
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/kuaizhitubiao.js
+    timeout: 60
+    body_required: true
+- http_request:
+    name: Onexilie
+    match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Script/main/Onexilie.js
+    timeout: 60
+- http_response:
+    name: Onexilie
+    match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Script/main/Onexilie.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: scannerPro
+    match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Script/main/scannerPro.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: Pillow
+    match: ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$)
+    script_url: https://raw.githubusercontent.com/Yu9191/Script/main/Pillow.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: AppRCTesters
+    match: ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+    script_url: https://apptesters.org/wp-content/uploads/AutoRC.js
+    update_interval: 5
+    timeout: 30
+    body_required: true
+- http_response:
+    name: AppAdTesters
+    match: https://api.adapty.io/api/v1/sdk/analytics/profiles
+    script_url: https://apptesters.org/wp-content/uploads/Adapty.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppFMTesters
+    match: https://order.creativeappnow.com/iap/receipt
+    script_url: https://apptesters.org/wp-content/uploads/Facemoji.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppReTesters
+    match: https:\/\/license\.pdfexpert\.com\/api\/2\.0\/(calendarslite|pdfexpert6|documents)\/subscription\/(refresh|check)
+    script_url: https://apptesters.org/wp-content/uploads/readdle.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppitTesters
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://apptesters.org/wp-content/uploads/iTunes.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppMuTesters
+    match: us-central1-muslim-pro-app.cloudfunctions.net/GetUserPremiumInfo
+    script_url: https://apptesters.org/wp-content/uploads/MuslimPro.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppGrTesters
+    match: ^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$
+    script_url: https://apptesters.org/wp-content/uploads/Grammarly.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppeSTesters
+    match: api.esound.app/account
+    script_url: https://apptesters.org/wp-content/uploads/eSound.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppPurTesters
+    match: https://api.purchasely.io/paab/user_purchases
+    script_url: https://apptesters.org/wp-content/uploads/purchasely.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppVaTesters
+    match: prod.studysmarter.de/payments/info
+    script_url: https://apptesters.org/wp-content/uploads/Vaia.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppQOTesters
+    match: api.qonversion.io/v1/user/init
+    script_url: https://apptesters.org/wp-content/uploads/qonversion.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppDJTesters
+    match: https://api.mwm-users.com/me/features
+    script_url: https://apptesters.org/wp-content/uploads/edjingMix.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppVCTesters
+    match: https://api-fra.vivacut.com/api/rest/commerce/integrate/vip/perform
+    script_url: https://apptesters.org/wp-content/uploads/VivaCut.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppCaTesters
+    match: https://carrotweather.herokuapp.com/parse/functions/findSubscriptionsForUserId
+    script_url: https://apptesters.org/wp-content/uploads/Carrot.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppKineTesters
+    match: https://api-account.kinemasters.com/v2/user/subscribe
+    script_url: https://apptesters.org/wp-content/uploads/KineMaster.js
+    update_interval: 5
+    body_required: true
+- http_request:
+    name: AppPicTesters
+    match: https://api.picsart.com/gw-v2/shop/subscription/apple/purchases
+    script_url: https://apptesters.org/wp-content/uploads/PicsArt.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppAMTesters
+    match: https://us-central1-alight-creative.cloudfunctions.net/getAccountStatusAndLicenses
+    script_url: https://apptesters.org/wp-content/uploads/AlightMotion.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppSaTesters
+    match: api.sandbox.love/accounts/current
+    script_url: https://apptesters.org/wp-content/uploads/SandBox.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppSSesters
+    match: subscriptions.songshift.com/validate
+    script_url: https://apptesters.org/wp-content/uploads/SongShift.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppADBTesters
+    match: api.adblockpro.app/verify
+    script_url: https://apptesters.org/wp-content/uploads/AdblockPro.js
+    update_interval: 5
+    body_required: true
+- http_response:
+    name: AppADGTesters
+    match: ^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?)
+    script_url: https://apptesters.org/wp-content/uploads/AdGuardPro.js
+    update_interval: 5
+    body_required: true
+mitm:
+  hostnames:
+  - api.revenuecat.com
+  - buy.itunes.apple.com
+  - api.picsart.com
+  - api-account.kinemasters.com
+  - us-central1-alight-creative.cloudfunctions.net
+  - api.adapty.io
+  - carrotweather.herokuapp.com
+  - order.creativeappnow.com
+  - api.mwm-users.com
+  - us-central1-muslim-pro-app.cloudfunctions.net
+  - prod.studysmarter.de
+  - api.qonversion.io
+  - subscription.grammarly.com
+  - api.esound.app
+  - api.purchasely.io
+  - api.sandbox.love
+  - subscriptions.songshift.com
+  - api.adblockpro.app
+  - mobile-api.adguard.org
+  - testflight.apple.com
+  - api.apphud.com
+  - Script.hub
+  - Sub.store
+  - api.rochathub.com
