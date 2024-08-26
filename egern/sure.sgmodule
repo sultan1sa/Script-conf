@@ -1,0 +1,344 @@
+#!name=sure
+#!desc=sure
+
+[Script]
+tochat- = type=http-response, pattern=https://firebaseinstallations.googleapis.com/v1/projects/rochat-395002/installations, script-path=Rochat.js, requires-body=true, max-size=131072, script-update-interval=0, timeout=10
+
+rochat = type=http-response, pattern=https://api.rochathub.com/inteco.user.v1.UserRightsService/GetUserRights, script-path=https://raw.githubusercontent.com/qingsiguan/mima/main/ro, requires-body=true, max-size=-1, timeout=60
+
+chat = type=http-response, pattern=https://api.adapty.io/api/v1/sdk/in-apps/apple/receipt/validate/, script-path=https://paste.gg/p/anonymous/30a2757c556d433283ccf8d3fb01d281/files/4202a53e1ca34655a46eb547d6d82486/raw, requires-body=true, max-size=131072, script-update-interval=0, timeout=10
+
+mIl10 = type=http-response, pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions, script-path=https://paste.gg/p/anonymous/d3692a6c5a4c46609d263e1cc242819a/files/64095f42ee6f4314b8bffcb76eb0df9c/raw, requires-body=true, max-size=131072, script-update-interval=0, timeout=10
+
+YouTube-Ad-Blocker = type=http-request, pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A), script-path=https://choler.github.io/Surge/Script/YouTube.js, script-update-interval=0
+
+YouTube = type=http-request, pattern=https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier), script-path=https://choler.github.io/Surge/Script/YouTube.js
+
+JJSZ = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/JJSZ.js, requires-body=true, max-size=-1, timeout=60
+
+GLOBEDQ = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/receipts, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/GLOBEDQ.js, requires-body=true, max-size=-1, timeout=60
+
+.com/Rnik666/YJTJS/main/ = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/receipts, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/Mizframa, requires-body=true, max-size=-1, timeout=60
+
+FXDD = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/FXDD.js, requires-body=true, max-size=-1, timeout=60
+
+GIF = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/GIF.js, requires-body=true, max-size=-1, timeout=60
+
+YYXJ = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/YYXJ.js, requires-body=true, max-size=-1, timeout=60
+
+Chat%20AI = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/Chat%20AI.js, requires-body=true, max-size=-1, timeout=60
+
+YYJSQ = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/YYJSQ.js, requires-body=true, max-size=-1, timeout=60
+
+context = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/(.+)\/offerings, script-path=https://raw.githubusercontent.com/leey668/pyer/main/context.js, requires-body=true, max-size=-1, timeout=60
+
+ffxj = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/(.+)\/offerings, script-path=https://raw.githubusercontent.com/leey668/pyer/main/ffxj.js, requires-body=true, max-size=-1, timeout=60
+
+limicam = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/(.+)\/offerings, script-path=https://raw.githubusercontent.com/leey668/pyer/main/limicam.js, requires-body=true, max-size=-1, timeout=60
+
+Liqingzhao = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Liqingzhao.js, requires-body=true, max-size=-1, timeout=60
+
+Meme = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Meme.js, requires-body=true, max-size=-1, timeout=60
+
+Mindkit = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Mindkit.js, requires-body=true, max-size=-1, timeout=60
+
+1001 = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/1001.js, requires-body=true, max-size=-1, timeout=60
+
+3Dscanner = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/3Dscanner.js, requires-body=true, max-size=-1, timeout=60
+
+6fzyy = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/6fzyy.js, requires-body=true, max-size=-1, timeout=60
+
+Again = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Again.js, requires-body=true, max-size=-1, timeout=60
+
+Ailinghui = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Ailinghui.js, requires-body=true, max-size=-1, timeout=60
+
+BodyTune = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/BodyTune.js, requires-body=true, max-size=-1, timeout=60
+
+CapyMood = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/CapyMood.js, requires-body=true, max-size=-1, timeout=60
+
+ECG = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/ECG.js, requires-body=true, max-size=-1, timeout=60
+
+EWA = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/EWA.js, requires-body=true, max-size=-1, timeout=60
+
+Iam = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Iam.js, requires-body=true, max-size=-1, timeout=60
+
+Jiazigu = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Jiazigu.js, requires-body=true, max-size=-1, timeout=60
+
+JisuanqiAir = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/JisuanqiAir.js, requires-body=true, max-size=-1, timeout=60
+
+Mondly = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Mondly.js, requires-body=true, max-size=-1, timeout=60
+
+Motivation = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Motivation.js, requires-body=true, max-size=-1, timeout=60
+
+NYFM = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/NYFM.js, requires-body=true, max-size=-1, timeout=60
+
+OfflineMusicPlayer = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/OfflineMusicPlayer.js, requires-body=true, max-size=-1, timeout=60
+
+PicPro = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/PicPro.js, requires-body=true, max-size=-1, timeout=60
+
+PicsLeap = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/PicsLeap.js, requires-body=true, max-size=-1, timeout=60
+
+PrettyUp = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/PrettyUp.js, requires-body=true, max-size=-1, timeout=60
+
+ProFit = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/ProFit.js, requires-body=true, max-size=-1, timeout=60
+
+Ptime = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Ptime.js, requires-body=true, max-size=-1, timeout=60
+
+RSBJ = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/RSBJ.js, requires-body=true, max-size=-1, timeout=60
+
+RZJThb = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/RZJThb.js, requires-body=true, max-size=-1, timeout=60
+
+RitmoVideo = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/RitmoVideo.js, requires-body=true, max-size=-1, timeout=60
+
+Side = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Side.js, requires-body=true, max-size=-1, timeout=60
+
+StandByUs = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/StandByUs.js, requires-body=true, max-size=-1, timeout=60
+
+Storybeat = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Storybeat.js, requires-body=true, max-size=-1, timeout=60
+
+Xk = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Xk.js, requires-body=true, max-size=-1, timeout=60
+
+bbaabbyy = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/bbaabbyy.js, requires-body=true, max-size=-1, timeout=60
+
+bizhi = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/bizhi.js, requires-body=true, max-size=-1, timeout=60
+
+bs = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/bs.js, requires-body=true, max-size=-1, timeout=60
+
+celiangyuan = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/celiangyuan.js, requires-body=true, max-size=-1, timeout=60
+
+cwd = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/cwd.js, requires-body=true, max-size=-1, timeout=60
+
+daanjl = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/daanjl.js, requires-body=true, max-size=-1, timeout=60
+
+dingdangdaiban = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/dingdangdaiban.js, requires-body=true, max-size=-1, timeout=60
+
+dzyj = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/dzyj.js, requires-body=true, max-size=-1, timeout=60
+
+guangyingxiutu = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/guangyingxiutu.js, requires-body=true, max-size=-1, timeout=60
+
+jrxy = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/jrxy.js, requires-body=true, max-size=-1, timeout=60
+
+jzxd = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/jzxd.js, requires-body=true, max-size=-1, timeout=60
+
+lunwenjun = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/lunwenjun.js, requires-body=true, max-size=-1, timeout=60
+
+moguixiangji = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/moguixiangji.js, requires-body=true, max-size=-1, timeout=60
+
+pdfReaderfree = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/pdfReaderfree.js, requires-body=true, max-size=-1, timeout=60
+
+pdfpro = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/pdfpro.js, requires-body=true, max-size=-1, timeout=60
+
+pollykann = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/pollykann.js, requires-body=true, max-size=-1, timeout=60
+
+pthxx = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/pthxx.js, requires-body=true, max-size=-1, timeout=60
+
+qianbihua = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/qianbihua.js, requires-body=true, max-size=-1, timeout=60
+
+shoton = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/shoton.js, requires-body=true, max-size=-1, timeout=60
+
+shudu = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/shudu.js, requires-body=true, max-size=-1, timeout=60
+
+smartgym = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/smartgym.js, requires-body=true, max-size=-1, timeout=60
+
+spxz = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/spxz.js, requires-body=true, max-size=-1, timeout=60
+
+sssmjc = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/sssmjc.js, requires-body=true, max-size=-1, timeout=60
+
+wmyx = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/wmyx.js, requires-body=true, max-size=-1, timeout=60
+
+xgn = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/xgn.js, requires-body=true, max-size=-1, timeout=60
+
+yytt = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/yytt.js, requires-body=true, max-size=-1, timeout=60
+
+yyxw = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/yyxw.js, requires-body=true, max-size=-1, timeout=60
+
+yyyj = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/yyyj.js, requires-body=true, max-size=-1, timeout=60
+
+zhouzhouji = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/zhouzhouji.js, requires-body=true, max-size=-1, timeout=60
+
+ztqs = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/ztqs.js, requires-body=true, max-size=-1, timeout=60
+
+zyjh = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/zyjh.js, requires-body=true, max-size=-1, timeout=60
+
+linggan = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/linggan.js, requires-body=true, max-size=-1, timeout=60
+
+wanyuanyuedu = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wanyuanyuedu.js, requires-body=true, max-size=-1, timeout=60
+
+Photomator = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Photomator.js, timeout=60
+
+jieyadonghua = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/jieyadonghua.js, timeout=60
+
+zettelbox = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/zettelbox.js, timeout=60
+
+Photomator = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Photomator.js, requires-body=true, max-size=-1, timeout=60
+
+jieyadonghua = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/jieyadonghua.js, requires-body=true, max-size=-1, timeout=60
+
+Revenuecat = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, timeout=60
+
+Lifelog = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://github.com/Yu9191/Rewrite/raw/main/Lifelog.js, requires-body=true, max-size=-1, timeout=60
+
+Context = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Context.js, requires-body=true, max-size=-1, timeout=60
+
+Light = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Light.js, requires-body=true, max-size=-1, timeout=60
+
+Lungy = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Lungy.js, requires-body=true, max-size=-1, timeout=60
+
+Photon = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Photon.js, requires-body=true, max-size=-1, timeout=60
+
+Emoji+ = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Reven/Emoji+.js, requires-body=true, max-size=-1, timeout=60
+
+Revenuecat = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, requires-body=true, max-size=-1, timeout=60
+
+Stresswatch = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Stresswatch.js, requires-body=true, max-size=-1, timeout=60
+
+Tico = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Tico.js, requires-body=true, max-size=-1, timeout=60
+
+Touchretouch = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Touchretouch.js, requires-body=true, max-size=-1, timeout=60
+
+aptv = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/aptv.js, requires-body=true, max-size=-1, timeout=60
+
+diangongjsq = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/diangongjsq.js, requires-body=true, max-size=-1, timeout=60
+
+paike = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/paike.js, requires-body=true, max-size=-1, timeout=60
+
+rsqd = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/rsqd.js, requires-body=true, max-size=-1, timeout=60
+
+spark = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/spark.js, requires-body=true, max-size=-1, timeout=60
+
+wyww = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wyww.js, requires-body=true, max-size=-1, timeout=60
+
+xiangjiyin = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiangjiyin.js, requires-body=true, max-size=-1, timeout=60
+
+xinxijs = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xinxijs.js, requires-body=true, max-size=-1, timeout=60
+
+yiqiqici = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/yiqiqici.js, requires-body=true, max-size=-1, timeout=60
+
+zettelbox = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/zettelbox.js, requires-body=true, max-size=-1, timeout=60
+
+zhongguofalv = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/zhongguofalv.js, requires-body=true, max-size=-1, timeout=60
+
+zxhdmx = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/zxhdmx.js, requires-body=true, max-size=-1, timeout=60
+
+168qingduanshi = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/168qingduanshi.js, requires-body=true, max-size=-1, timeout=60
+
+BeatMakerGo = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/BeatMakerGo.js, requires-body=true, max-size=-1, timeout=60
+
+DVD = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/DVD.js, requires-body=true, max-size=-1, timeout=60
+
+OldRoll = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/OldRoll.js, requires-body=true, max-size=-1, timeout=60
+
+chanji = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/chanji.js, requires-body=true, max-size=-1, timeout=60
+
+daofangtiaozhan = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/daofangtiaozhan.js, requires-body=true, max-size=-1, timeout=60
+
+dingyuetong = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/dingyuetong.js, requires-body=true, max-size=-1, timeout=60
+
+hesheng = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/hesheng.js, requires-body=true, max-size=-1, timeout=60
+
+iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/iTunes.js, requires-body=true, max-size=-1, timeout=60
+
+yzqnw = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/yzqnw.js, requires-body=true, max-size=-1, timeout=60
+
+lksyxj = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/lksyxj.js, requires-body=true, max-size=-1, timeout=60
+
+qbbj = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/qbbj.js, requires-body=true, max-size=-1, timeout=60
+
+smartai = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/smartai.js, requires-body=true, max-size=-1, timeout=60
+
+vibee = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/vibee.js, requires-body=true, max-size=-1, timeout=60
+
+videoday = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/videoday.js, requires-body=true, max-size=-1, timeout=60
+
+wmgq = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wmgq.js, requires-body=true, max-size=-1, timeout=60
+
+wunian = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wunian.js, requires-body=true, max-size=-1, timeout=60
+
+xiaorichang = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaorichang.js, requires-body=true, max-size=-1, timeout=60
+
+xiongzhangji = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiongzhangji.js, requires-body=true, max-size=-1, timeout=60
+
+yaseliulanqi = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/yaseliulanqi.js, requires-body=true, max-size=-1, timeout=60
+
+znzdw = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/znzdw.js, requires-body=true, max-size=-1, timeout=60
+
+xTerminal = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xTerminal.js, requires-body=true, max-size=-1, timeout=60
+
+fotoz = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/fotoz.js, requires-body=true, max-size=-1, timeout=60
+
+imgplay = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/imgplay.js, requires-body=true, max-size=-1, timeout=60
+
+DarkRoom = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/DarkRoom.js, requires-body=true, max-size=-1, timeout=60
+
+Drops = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Drops.js, requires-body=true, max-size=-1, timeout=60
+
+Persona = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Persona.js, requires-body=true, max-size=-1, timeout=60
+
+PureLibro = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/PureLibro.js, requires-body=true, max-size=-1, timeout=60
+
+Purejizhang = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Purejizhang.js, requires-body=true, max-size=-1, timeout=60
+
+Snipd = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Snipd.js, requires-body=true, max-size=-1, timeout=60
+
+Speak = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Speak.js, requires-body=true, max-size=-1, timeout=60
+
+TransmissionHub = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/TransmissionHub.js, requires-body=true, max-size=-1, timeout=60
+
+chatliankouyu = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/chatliankouyu.js, requires-body=true, max-size=-1, timeout=60
+
+iHabit = type=http-response, pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/iHabit.js, requires-body=true, max-size=-1, timeout=60
+
+kuaizhitubiao = type=http-response, pattern=https://api.revenuecat.com/v1/receipts, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/kuaizhitubiao.js, requires-body=true, max-size=-1, timeout=60
+
+Onexilie = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Onexilie.js, timeout=60
+
+Onexilie = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Onexilie.js, requires-body=true, max-size=-1, timeout=60
+
+scannerPro = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/Yu9191/Script/main/scannerPro.js, requires-body=true, max-size=-1, timeout=60
+
+Pillow = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Script/main/Pillow.js, requires-body=true, max-size=-1, timeout=60
+
+AppRCTesters = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://apptesters.org/wp-content/uploads/AutoRC.js, requires-body=true, max-size=-1, script-update-interval=5, timeout=30
+
+AppAdTesters = type=http-response, pattern=https://api.adapty.io/api/v1/sdk/analytics/profiles, script-path=https://apptesters.org/wp-content/uploads/Adapty.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppFMTesters = type=http-response, pattern=https://order.creativeappnow.com/iap/receipt, script-path=https://apptesters.org/wp-content/uploads/Facemoji.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppReTesters = type=http-response, pattern=https:\/\/license\.pdfexpert\.com\/api\/2\.0\/(calendarslite|pdfexpert6|documents)\/subscription\/(refresh|check), script-path=https://apptesters.org/wp-content/uploads/readdle.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppitTesters = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://apptesters.org/wp-content/uploads/iTunes.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppMuTesters = type=http-response, pattern=us-central1-muslim-pro-app.cloudfunctions.net/GetUserPremiumInfo, script-path=https://apptesters.org/wp-content/uploads/MuslimPro.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppGrTesters = type=http-response, pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$, script-path=https://apptesters.org/wp-content/uploads/Grammarly.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppeSTesters = type=http-response, pattern=api.esound.app/account, script-path=https://apptesters.org/wp-content/uploads/eSound.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppPurTesters = type=http-response, pattern=https://api.purchasely.io/paab/user_purchases, script-path=https://apptesters.org/wp-content/uploads/purchasely.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppVaTesters = type=http-response, pattern=prod.studysmarter.de/payments/info, script-path=https://apptesters.org/wp-content/uploads/Vaia.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppQOTesters = type=http-response, pattern=api.qonversion.io/v1/user/init, script-path=https://apptesters.org/wp-content/uploads/qonversion.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppDJTesters = type=http-response, pattern=https://api.mwm-users.com/me/features, script-path=https://apptesters.org/wp-content/uploads/edjingMix.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppVCTesters = type=http-response, pattern=https://api-fra.vivacut.com/api/rest/commerce/integrate/vip/perform, script-path=https://apptesters.org/wp-content/uploads/VivaCut.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppCaTesters = type=http-response, pattern=https://carrotweather.herokuapp.com/parse/functions/findSubscriptionsForUserId, script-path=https://apptesters.org/wp-content/uploads/Carrot.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppKineTesters = type=http-response, pattern=https://api-account.kinemasters.com/v2/user/subscribe, script-path=https://apptesters.org/wp-content/uploads/KineMaster.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppPicTesters = type=http-request, pattern=https://api.picsart.com/gw-v2/shop/subscription/apple/purchases, script-path=https://apptesters.org/wp-content/uploads/PicsArt.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppAMTesters = type=http-response, pattern=https://us-central1-alight-creative.cloudfunctions.net/getAccountStatusAndLicenses, script-path=https://apptesters.org/wp-content/uploads/AlightMotion.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppSaTesters = type=http-response, pattern=api.sandbox.love/accounts/current, script-path=https://apptesters.org/wp-content/uploads/SandBox.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppSSesters = type=http-response, pattern=subscriptions.songshift.com/validate, script-path=https://apptesters.org/wp-content/uploads/SongShift.js, requires-body=true, max-size=-1, script-update-interval=5
+
+AppADBTesters = type=http-response, pattern=api.adblockpro.app/verify, script-path=https://apptesters.org/wp-content/uploads/AdblockPro.js, requires-body=true, max-size=0, script-update-interval=5
+
+AppADGTesters = type=http-response, pattern=^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?), script-path=https://apptesters.org/wp-content/uploads/AdGuardPro.js, requires-body=true, max-size=0, script-update-interval=5
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com, buy.itunes.apple.com, api.picsart.com, api-account.kinemasters.com, us-central1-alight-creative.cloudfunctions.net, api.adapty.io, carrotweather.herokuapp.com, order.creativeappnow.com, api.mwm-users.com, us-central1-muslim-pro-app.cloudfunctions.net, prod.studysmarter.de, api.qonversion.io, subscription.grammarly.com, api.esound.app, api.purchasely.io, api.sandbox.love, subscriptions.songshift.com, api.adblockpro.app, mobile-api.adguard.org, testflight.apple.com, api.apphud.com, Script.hub, Sub.store, api.rochathub.com
